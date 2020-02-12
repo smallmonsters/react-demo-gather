@@ -3,11 +3,12 @@ import Case from '../page/case';
 const routes=[
   {
     path:"/",
-    components:Index,
+    component:Index,
+    exact:true
   },
   {
     path:"/case",
-    components:Case,
+    component:Case,
   },
 ]
 
