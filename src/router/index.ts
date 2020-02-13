@@ -1,14 +1,9 @@
-import Index from '../page/index';
-import Case from '../page/case';
+import Index from '../examples/index';
 const routes=[
   {
     path:"/",
     component:Index,
     exact:true
-  },
-  {
-    path:"/case",
-    component:Case,
   },
 ]
 
