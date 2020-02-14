@@ -1,21 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 
-export class Case extends React.Component {
-  render() {
-    return (
-      <div>
-        案例页
-       <div>
-          <Link to={{
-            pathname: "/"
-          }}>
-            首页
-        </Link>
-        </div>
-      </div>
-    );
-  }
+
+
+function A() {
+  let { path, url } = useRouteMatch();
+  console.log(path, url)
+  return (
+    <div>
+      这是A页面
+      {/* <Link to={{
+        pathname: `/react-router-dom/browser-router/basename/b`
+      }}>
+        to B
+        </Link> */}
+    </div>
+  );
 }
-
-export default Case;
+export default A;

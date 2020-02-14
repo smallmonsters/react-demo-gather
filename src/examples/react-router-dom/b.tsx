@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, useRouteMatch } from 'react-router-dom';
 
-export class Index extends Component {
-  render() {
-    return (
+function B() {
+  // let { url } = useRouteMatch();
+  return (
+    <div>
+      这是B页面
       <div>
-        首页
-        <div>
-          <Link to={{
-            pathname: "/case"
-          }}>案例页</Link>
-        </div>
+        {/* <Link to={{
+          pathname: `/react-router-dom/browser-router/basename/a`
+        }}>to A</Link> */}
       </div>
-    );
-  }
+    </div>
+  );
 }
 
-export default Index;
+
+export default B;

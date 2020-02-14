@@ -1,4 +1,4 @@
-const menu = [
+const menu: Menus[] = [
   {
     key: "react-router-dom",
     title: "react-router-dom",
@@ -9,7 +9,18 @@ const menu = [
         children: [
           {
             key: "basename",
+            path: "/react-router-dom/browser-router/basename",
             title: "basename",
+          },
+          {
+            key: "getUserConfirmation",
+            path: "/react-router-dom/browser-router/getUserConfirmation",
+            title: "getUserConfirmation",
+          },
+          {
+            key: "Nesting",
+            path: "/react-router-dom/nesting",
+            title: "嵌套路由",
           }
         ]
       },
