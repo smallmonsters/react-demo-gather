@@ -18,13 +18,18 @@ const menu: Menus[] = [
             title: "getUserConfirmation",
           },
           {
-            key: "Nesting",
-            path: "/react-router-dom/nesting",
-            title: "嵌套路由",
-          }
+            key: "forceRefresh",
+            path: "/react-router-dom/browser-router/forceRefresh",
+            title: "forceRefresh",
+          },
         ]
       },
+      {
+        key: "Nesting",
+        path: "/react-router-dom/nesting",
+        title: "嵌套路由",
+      }
     ],
-  }
+  },
 ]
 export default menu;

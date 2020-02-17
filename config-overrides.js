@@ -1,4 +1,3 @@
-// /* global require, module, __dirname */
 const { override, fixBabelImports, addWebpackAlias } = require('customize-cra')
 const path = require('path')
 

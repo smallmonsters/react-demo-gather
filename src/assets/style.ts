@@ -15,3 +15,7 @@ font-size:20px;
 export const Title = styled.h1`
 text-align:center;
 `
+
+export const Summary=styled.div`
+
+`

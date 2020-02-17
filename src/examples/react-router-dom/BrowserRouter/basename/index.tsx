@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
-import { Title } from '../../../../assets/style';
+import { BrowserRouter, Link } from 'react-router-dom';
+import { Title } from '@/assets/style';
 
 export class Index extends Component {
   render() {

@@ -1,10 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
-// import routes from './router/index';
+import { BrowserRouter, Link, Switch } from 'react-router-dom';
 import routes from '@/router/index';
 import { Menu } from 'antd';
-import menuData from './utils/menu';
-import { Home } from './assets/style';
+import menuData from '@/utils/menu';
+import { Home } from '@/assets/style';
+import { renderRoutes } from "react-router-config";
+
 
 const { SubMenu, Item } = Menu;
 
@@ -29,12 +30,11 @@ const Recursion = (menus: Menus[]) => {
   )
 }
 
-
 const App = () => {
   const recursion = Recursion(menuData)
   return (
     <div className="App">
-      <BrowserRouter >
+      <BrowserRouter>
         <Home>
           <Menu
             style={{ height: "100vh" }}
@@ -45,7 +45,7 @@ const App = () => {
             {recursion}
           </Menu>
           <Switch>
-            {routes.map(v => <Route key={v.path} exact={true} path={v.path} component={v.component}></Route>)}
+            {renderRoutes(routes)}
           </Switch>
         </Home>
       </BrowserRouter>
