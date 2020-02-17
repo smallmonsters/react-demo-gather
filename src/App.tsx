@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter, Link, Switch } from 'react-router-dom';
 import routes from '@/router/index';
 import { Menu } from 'antd';
@@ -44,9 +44,11 @@ const App = () => {
           >
             {recursion}
           </Menu>
-          <Switch>
-            {renderRoutes(routes)}
-          </Switch>
+          <Suspense fallback={<div>loading...</div>}>
+            <Switch>
+              {renderRoutes(routes)}
+            </Switch>
+          </Suspense>
         </Home>
       </BrowserRouter>
     </div>
