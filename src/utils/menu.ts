@@ -1,4 +1,4 @@
-import { browserRouterMenu,linkMenu } from './menus/index';
+import { browserRouterMenu,linkMenu,nesting } from './menus/index';
 const menu: Menus[] = [
   {
     key: "react-router-dom",
@@ -6,11 +6,7 @@ const menu: Menus[] = [
     children: [
       browserRouterMenu,
       linkMenu,
-      {
-        key: "Nesting",
-        path: "/react-router-dom/nesting",
-        title: "嵌套路由",
-      }
+      nesting
     ],
   },
 ]

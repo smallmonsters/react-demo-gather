@@ -1,15 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function B() {
-  // let { url } = useRouteMatch();
-  return (
-    <div>
-      这是B页面
+class B extends Component {
+  render() {
+    return (
       <div>
+        这是B页面
       </div>
-    </div>
-  );
+    );
+  }
 }
-
 
 export default B;
