@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Link, Prompt } from 'react-router-dom';
+import { BrowserRouter, Link, Prompt, Route } from 'react-router-dom';
 import { RouteConfig } from 'react-router-config';
 import { Title } from '@/assets/style';
 
@@ -9,10 +9,11 @@ export class Index extends Component<RouteConfig, any> {
     this.state = {
       text: "这是自定义message"
     }
-
+    this.confirm = this.confirm.bind(this)
   }
 
   confirm(message: string) {
+    console.log(1);
     this.setState({
       text: message
     })
@@ -24,15 +25,20 @@ export class Index extends Component<RouteConfig, any> {
         <BrowserRouter>
           <Prompt message="默认行为"></Prompt>
           <ul>
-            <li ><Link to="/moren">默认行为:window.confirm</Link></li>
+            <li ><Link to="/react-router-dom/browser-router/getUserConfirmation/moren">默认行为:window.confirm</Link></li>
+            <Route path="/react-router-dom/browser-router/getUserConfirmation/moren">默认行为</Route>
           </ul>
         </BrowserRouter>
-        <BrowserRouter getUserConfirmation={this.confirm.bind(this)}>
+        <BrowserRouter getUserConfirmation={(message, fn) => {
+          fn(true);
+          this.confirm(message);
+        }
+        }>
           <Prompt message="自定义message改变了"></Prompt>
           <ul>
-            <li><Link to="/zidingyi">自定义</Link></li>
+            <li><Link to="/react-router-dom/browser-router/getUserConfirmation/zidingyi">自定义</Link></li>
           </ul>
-          <div>{this.state.text}</div>
+          <Route path="/react-router-dom/browser-router/getUserConfirmation/zidingyi">  <div>{this.state.text}</div></Route>
         </BrowserRouter>
       </div>
     );

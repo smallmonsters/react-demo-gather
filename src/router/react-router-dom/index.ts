@@ -1,9 +1,12 @@
-import BrowserRouter from './BrowserRouter';
+import browserRouter from './BrowserRouter';
 import linkRouter from './linkRouter';
 import nesting from './nesting';
+import hashRouter from './hashRouter';
+
 
 export default [
   ...linkRouter,
-  ...BrowserRouter,
-  ...nesting
+  ...browserRouter,
+  ...nesting,
+  ...hashRouter
 ]
