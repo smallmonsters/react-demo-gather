@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Link, Route } from 'react-router-dom';
+import { BrowserRouter, Link, Route,HashRouter } from 'react-router-dom';
 import A from '../a';
+import { Title } from '@/assets/style';
 
 export class To extends Component {
   render() {
+    const route = {
+      pathname: "/react-router-dom/link/to/object",
+      search: "?name=Bob",
+      hash: "#the-hash",
+      state: { text: "true" }
+    }
     return (
       <div>
+        <Title>对比有无"/"</Title>
         <BrowserRouter >
           <ul><li><Link to="react-router-dom/link/to/a">to:/(x),path:/(v)</Link></li></ul>
           <Route path="/react-router-dom/link/react-router-dom/link/to/a"><A /></Route>
@@ -26,6 +34,16 @@ export class To extends Component {
           <Route path="/react-router-dom/link/to/a"><A /></Route>
         </BrowserRouter>
         <p>Link的to属性和Route的path属性前一定要加/</p>
+        <Title>String</Title>
+        <BrowserRouter >
+          <ul><li><Link to="/react-router-dom/link/to/search?name=Mike#age">string</Link></li></ul>
+          <Route path="/react-router-dom/link/to/search"><A /></Route>
+        </BrowserRouter>
+        <Title>Object</Title>
+        <BrowserRouter >
+          <ul><li><Link to={route}>Object</Link></li></ul>
+          <Route path="/react-router-dom/link/to/object"><A /></Route>
+        </BrowserRouter>
       </div>
     );
   }

@@ -1,0 +1,12 @@
+body{
+  font-size: 16px;
+}
+.link{
+  cursor: pointer;
+}
+.active{
+  color:red;
+}
+.actives{
+  color:rgb(0, 255, 64);
+}

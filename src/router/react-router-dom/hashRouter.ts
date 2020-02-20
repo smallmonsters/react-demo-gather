@@ -1,5 +1,6 @@
 import basename from '@/examples/react-router-dom/HashRouter/basename';
 import getUserConfirmation from '@/examples/react-router-dom/HashRouter/getUserConfirmation';
+import children from '@/examples/react-router-dom/HashRouter/children';
 
 const HashRouters = [
   {
@@ -15,7 +16,14 @@ const HashRouters = [
     exact: true,
     key: "getUserConfirmation",
     title: "getUserConfirmation",
-  }
+  },
+  {
+    path: "/react-router-dom/hash-router/children",
+    component: children,
+    exact: true,
+    key: "children",
+    title: "children",
+  },
 ]
 
 export default HashRouters;
