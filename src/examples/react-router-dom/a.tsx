@@ -2,17 +2,17 @@ import React from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
 
 function Text(props: any) {
-  if (props.text&&props.value) return (<div>{props.text}:{props.value}</div>)
+  if (props.text && props.value) return (<div>{props.text}:{props.value}</div>)
   return <div></div>
 }
 
-function A(props: any) {
+function A(props) {
   let { showLen } = props
-  let str = []
-  let { key, hash, pathname, search, state } = useLocation()
+  let str:any[] = []
+  let { key, hash, pathname, search, state }= useLocation()
   console.log(useLocation());
   console.log(useHistory());
-  if (showLen) str.push(key)
+  if (showLen) str.push(key) 
   return (
     <div>
       这是A页面
@@ -20,7 +20,7 @@ function A(props: any) {
       <Text text="hash" value={hash}></Text>
       <Text text="pathname" value={pathname}></Text>
       <Text text="search" value={search}></Text>
-      <Text text="state.text" value={state&&state.text}></Text>
+      <Text text="state.text" value={state && state.text}></Text>
     </div>
   );
 }

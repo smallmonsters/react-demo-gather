@@ -7,7 +7,8 @@ export class Index extends Component<RouteConfig, any> {
   constructor(props: RouteConfig) {
     super(props);
     this.state = {
-      text: "这是自定义message"
+      text: "这是自定义message",
+      show:false
     }
     this.confirm = this.confirm.bind(this)
   }
@@ -15,7 +16,8 @@ export class Index extends Component<RouteConfig, any> {
   confirm(message: string) {
     console.log(1);
     this.setState({
-      text: message
+      text: message,
+      show:!this.state.show
     })
   }
   render() {

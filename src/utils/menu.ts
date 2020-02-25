@@ -1,4 +1,6 @@
 import * as Menus from './menus/index';
+import reactMenu from './menus/react/index';
+import lifecycleMenu from './menus/lifecycle/index';
 
 type menuKey = keyof typeof Menus
 
@@ -10,5 +12,7 @@ const menu: Menus[] = [
     title: "react-router-dom",
     children: children,
   },
+  reactMenu,
+  lifecycleMenu
 ]
 export default menu;

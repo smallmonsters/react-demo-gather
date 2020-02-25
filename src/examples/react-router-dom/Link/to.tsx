@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Link, Route,HashRouter } from 'react-router-dom';
+import { BrowserRouter, Link, Route } from 'react-router-dom';
 import A from '../a';
 import { Title } from '@/assets/style';
 

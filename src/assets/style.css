@@ -1,15 +1,15 @@
-body{
+body {
   font-size: 16px;
 }
-.link{
+
+.link, .pointer {
   cursor: pointer;
 }
-.active{
-  color:red;
-}
-.actives{
-  color:rgb(0, 255, 64);
+
+.active {
+  color: red;
 }
 
-
-
+.actives {
+  color: rgb(0, 255, 64);
+}
