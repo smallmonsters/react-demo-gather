@@ -18,7 +18,6 @@ class TextInput extends Component<any, any> {
     return (
       <input type="text" onChange={this.changeValue} value={this.state.value}></input>
     )
-
   }
 }
 
