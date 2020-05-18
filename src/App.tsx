@@ -7,7 +7,6 @@ import { Home } from '@/assets/style';
 import { renderRoutes } from "react-router-config";
 
 const { SubMenu, Item } = Menu;
-
 const Recursion = (menus: Menus[]) => {
   return (
     menus.map((v) => {

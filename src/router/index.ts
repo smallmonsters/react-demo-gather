@@ -1,18 +1,19 @@
 import Index from '@/examples/index';
-import reactRoute from '@/router/react';
-import lifecycleRoute from '@/router/lifecycle/index';
-import * as ReactRouterDom from '@/router/react-router-dom/index';
 import { RouteConfig } from "react-router-config";
+import menus from "@/utils/menu"
 
+const getRouters = (menu) => {
+  return menu.map(v => {
+    if (v.children) return getRouters(v.children).flat()
+    if (!v.isMenu) return v
+  }).filter(Boolean).flat()
+}
 const routes: RouteConfig[] = [
   {
     path: "/",
     component: Index,
     exact: true
   },
-  ...ReactRouterDom.default,
-  ...reactRoute,
-  ...lifecycleRoute
+  ...getRouters(menus),
 ]
-
 export default routes

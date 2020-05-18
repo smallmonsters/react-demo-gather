@@ -1,4 +1,4 @@
-import React, { Component, useRef, useState, useEffect, useCallback, Fragment } from 'react';
+import React, { Component, useRef, useState, useEffect, Fragment } from 'react';
 import { Title } from '@/assets/style';
 
 function RefHook() {
